@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="theme-color" content="#090909">
+<title>JUNIUS CF</title>
+<style>
+:root{--red:#f02b3d;--bg:#090909;--panel:#151515;--muted:#929292}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 50% 0%,#321014 0,#090909 48%);color:#f6f6f6;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;min-height:100vh}
+.wrap{max-width:520px;margin:auto;padding:24px 18px 40px}.top{display:flex;justify-content:space-between;align-items:center;margin:8px 0 26px}.brand{font-weight:900;letter-spacing:2px;font-size:23px}.brand span{color:var(--red)}.tag{font-size:10px;letter-spacing:1.5px;color:#aaa;border:1px solid #383838;border-radius:20px;padding:7px 10px}
+.hero{display:flex;align-items:center;gap:17px;padding:20px;background:linear-gradient(135deg,#1b1112,#111);border:1px solid #3a1b1f;border-radius:22px;box-shadow:0 18px 50px #0008}
+.logo{width:76px;height:76px;border-radius:50%;background:linear-gradient(145deg,#ff5260,#9b0715);padding:5px;box-shadow:0 0 28px #e21d3438;flex:none}.logo div{height:100%;border-radius:50%;background:#080808;display:grid;place-items:center;color:var(--red);font-size:42px;font-weight:950;border:1px solid #4c171d}
+h1{font-size:20px;margin:0 0 5px;letter-spacing:1px}.sub{color:var(--muted);font-size:11px;letter-spacing:1.3px}.section{margin:26px 0 12px;font-size:11px;color:#aaa;letter-spacing:2px;font-weight:800}
+.card{background:linear-gradient(145deg,#181818,#101010);border:1px solid #292929;border-radius:17px;padding:16px;margin:10px 0}
+.row{display:flex;justify-content:space-between;align-items:center;gap:12px}.name{font-weight:750;font-size:14px}.desc{font-size:11px;color:var(--muted);margin-top:4px}
+.switch{appearance:none;width:44px;height:26px;background:#373737;border-radius:30px;position:relative;transition:.2s;flex:none;margin:0}.switch:before{content:"";position:absolute;width:20px;height:20px;top:3px;left:3px;background:white;border-radius:50%;transition:.2s}.switch:checked{background:var(--red)}.switch:checked:before{transform:translateX(18px)}
+.statgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.stat{background:#111;border:1px solid #292929;border-radius:15px;padding:15px}.stat strong{display:block;font-size:22px;color:var(--red)}.stat small{color:#999;font-size:10px;letter-spacing:1px}
+.btn{width:100%;border:1px solid #68212a;background:#260d11;color:#ff6470;border-radius:13px;padding:14px;font-weight:800;letter-spacing:1px;margin-top:16px}
+.note{font-size:10px;color:#777;text-align:center;line-height:1.6;margin:22px 8px}
+.float{position:fixed;right:16px;bottom:24px;width:62px;height:62px;border-radius:50%;border:3px solid #ff4857;background:#090909;color:#ff4051;font-size:27px;font-weight:950;box-shadow:0 0 24px #ef233b66;display:grid;place-items:center;cursor:pointer}
+.overlay{position:fixed;inset:0;background:#000b;display:none;align-items:flex-end;justify-content:center;padding:16px}.sheet{width:100%;max-width:480px;background:#151515;border:1px solid #5a2028;border-radius:22px;padding:20px}.sheethead{display:flex;justify-content:space-between;align-items:center;margin-bottom:15px}.close{background:#292929;border:0;color:#fff;border-radius:10px;padding:8px 12px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top"><div class="brand">JUNIUS <span>CF</span></div><div class="tag">iOS TEST UI · v1.0</div></header>
+  <section class="hero"><div class="logo"><div>J</div></div><div><h1>JUNIUS CONTROL</h1><div class="sub">RED / BLACK EDITION</div><div class="sub" style="margin-top:10px;color:#e85a66">● LOCAL DEMO READY</div></div></section>
+  <div class="section">GÖRSEL TEST PANELİ</div>
+  <div class="card"><div class="row"><div><div class="name">ESP Preview</div><div class="desc">Sadece örnek arayüz anahtarı</div></div><input class="switch" type="checkbox" aria-label="ESP Preview"></div></div>
+  <div class="card"><div class="row"><div><div class="name">Aim Assist Preview</div><div class="desc">Etkileşimsiz tasarım önizlemesi</div></div><input class="switch" type="checkbox" aria-label="Aim Assist Preview"></div></div>
+  <div class="card"><div class="row"><div><div class="name">Skin Preview</div><div class="desc">Görünüm paneli örneği</div></div><input class="switch" type="checkbox" aria-label="Skin Preview"></div></div>
+  <div class="section">PERFORMANS KARTI</div>
+  <div class="statgrid"><div class="stat"><strong id="fps">60</strong><small>DEMO FPS</small></div><div class="stat"><strong>v1.0</strong><small>BUILD</small></div></div>
+  <button class="btn" onclick="document.getElementById('sheet').style.display='flex'">JUNIUS MENÜSÜNÜ AÇ</button>
+  <p class="note">Bu dosya Safari'de çalışan bağımsız bir görsel demodur. CounterFlame'e bağlanmaz, oyun belleğini değiştirmez ve gerçek oyun içi hile işlevi sunmaz.</p>
+</div>
+<button class="float" aria-label="Menüyü aç" onclick="document.getElementById('sheet').style.display='flex'">J</button>
+<div class="overlay" id="sheet" onclick="if(event.target===this)this.style.display='none'"><div class="sheet"><div class="sheethead"><b style="color:#ff4857;letter-spacing:1.5px">JUNIUS QUICK MENU</b><button class="close" onclick="document.getElementById('sheet').style.display='none'">Kapat ✕</button></div><div class="desc" style="font-size:13px;line-height:1.7">Kırmızı-siyah arayüz hazır. Ana ekrandaki test anahtarları yalnızca görünümü değiştirir.</div></div></div>
+</body></html>
